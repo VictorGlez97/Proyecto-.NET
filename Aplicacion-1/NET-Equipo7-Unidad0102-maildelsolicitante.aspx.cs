@@ -19,12 +19,12 @@ namespace Aplicacion_1
         {
             if (!Regex.IsMatch(txt_correo.Text, @"[A-Z0-9._%+-]+@[A-Z0-9-]+.+.[A-Z]{2,4}") || txt_correo.Text == "")
             {
-                Response.Write("<script> alert('ERROR: Correo no valido'); </script>");
+                Response.Write("<script> window.alert('ERROR: Correo no valido'); </script>");
             }
 
             if (!Regex.IsMatch(txt_tel.Text, @"{3}[0-9]+{7}[0-9]") || txt_tel.Text == "")
             {
-                Response.Write("<script> alert('ERROR: Telefono celular no valido'); </scrip");
+                Response.Write("<script> window.alert('ERROR: Telefono celular no valido'); </scrip");
             }
 
         }

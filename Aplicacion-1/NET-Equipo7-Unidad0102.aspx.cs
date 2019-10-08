@@ -23,29 +23,29 @@ namespace Aplicacion_1
         {
             Correo c = new Correo();
 
-            if (!Regex.IsMatch(txt_correo.Text, @"") || txt_correo.Text == "")
+            /*if (!Regex.IsMatch(txt_correo.Text, @"\w+@\w+\.+[a-z]") || txt_correo.Text == "")
             {
-                Response.Write("<script> alert('ERROR: Correo no valido'); </script>");
+                Response.Write("<script> window.alert('ERROR: Correo no valido'); </script>");
                 Response.Redirect("/NET-Equipo7-Unidad0102.aspx");
             }
 
-            if (!Regex.IsMatch(txt_tel.Text, @"{3}[0-9]+{7}[0-9]") || txt_tel.Text == "")
+            if (!Regex.IsMatch(txt_tel.Text, @"^[9|6|7][0-9]{8}$") || txt_tel.Text == "")
             {
-                Response.Write("<script> alert('ERROR: Telefono no valido'); </script>");
+                Response.Write("<script> window.alert('ERROR: Telefono no valido'); </script>");
                 Response.Redirect("/NET-Equipo7-Unidad0102.aspx");
             }
 
-            if (!Regex.IsMatch(txt_CURP.Text, @"") || txt_CURP.Text == "")
+            if (!Regex.IsMatch(txt_CURP.Text, @"[A-Z]{4}[0-9]{6}[H,M][A-Z]{5}[0-9]{2}") || txt_CURP.Text == "")
             {
-                Response.Write("<script> alert('ERROR: CURP no valido'); </script>");
+                Response.Write("<script> window.alert('ERROR: CURP no valido'); </script>");
                 Response.Redirect("/NET-Equipo7-Unidad0102.aspx");
             }
 
-            if (!Regex.IsMatch(txt_RFC.Text, @"") || txt_RFC.Text == "")
+            if (!Regex.IsMatch(txt_RFC.Text, @"[A-Z]{4}[0-9]{6}[A-Z0-9]{3}") || txt_RFC.Text == "")
             {
-                Response.Write("<script> alert('ERROR: RFC no valido'); </script>");
+                Response.Write("<script> window.alert('ERROR: RFC no valido'); </script>");
                 Response.Redirect("/NET-Equipo7-Unidad0102.aspx");
-            }
+            }*/
 
             if (archivo.HasFile)
             {
@@ -65,7 +65,7 @@ namespace Aplicacion_1
             StringBuilder BodyMesage = new StringBuilder();
 
             BodyMesage.AppendLine("Solicitante: " + txt_nombre.Text);
-            BodyMesage.AppendLine("Nacimiento: " + nacimiento);
+            //BodyMesage.AppendLine("Nacimiento: " + nacimiento);
             BodyMesage.AppendLine("Correo: " + txt_correo.Text);
             BodyMesage.AppendLine("Telefono: " + txt_tel.Text);
             BodyMesage.AppendLine("CURP: " + txt_CURP.Text);
@@ -73,20 +73,14 @@ namespace Aplicacion_1
 
             if (c.EnviarMail(BodyMesage.ToString()) == true)
             {
-                Response.Write("<script> alert('Solicitud entregada con EXITO'); </script>");
+                Response.Write("<script> window.alert('Solicitud entregada con EXITO'); </script>");
                 Response.Redirect("/");
             }
             else
             {
-                Response.Write("<script> alert('ERROR: no se ha podido enviar la solicitud'); </script>");
+                Response.Write("<script> window.alert('ERROR: no se ha podido enviar la solicitud'); </script>");
             }
 
         }
-    }
-}
-
-namespace Aplicacion_1.NET-Equipo7-Unidad0102.aspx{
-    class Correo
-    {
     }
 }

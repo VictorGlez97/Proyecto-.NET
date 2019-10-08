@@ -28,7 +28,7 @@ namespace Aplicacion_1 {
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Calendar nacimiento;
+        protected global::System.Web.UI.WebControls.TextBox nacimiento;
         
         /// <summary>
         /// Control txt_correo.

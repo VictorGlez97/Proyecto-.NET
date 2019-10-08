@@ -47,18 +47,6 @@ C:\Users\vichg\source\repos\Aplicacion-1\Aplicacion-1\bin\roslyn\vbc.exe.config
 C:\Users\vichg\source\repos\Aplicacion-1\Aplicacion-1\bin\roslyn\vbc.rsp
 C:\Users\vichg\source\repos\Aplicacion-1\Aplicacion-1\bin\roslyn\VBCSCompiler.exe
 C:\Users\vichg\source\repos\Aplicacion-1\Aplicacion-1\bin\roslyn\VBCSCompiler.exe.config
-C:\Users\vichg\source\repos\Aplicacion-1\Aplicacion-1\bin\Antlr3.Runtime.dll
-C:\Users\vichg\source\repos\Aplicacion-1\Aplicacion-1\bin\AspNet.ScriptManager.bootstrap.dll
-C:\Users\vichg\source\repos\Aplicacion-1\Aplicacion-1\bin\AspNet.ScriptManager.jQuery.dll
-C:\Users\vichg\source\repos\Aplicacion-1\Aplicacion-1\bin\Microsoft.AspNet.FriendlyUrls.dll
-C:\Users\vichg\source\repos\Aplicacion-1\Aplicacion-1\bin\Microsoft.AspNet.Web.Optimization.WebForms.dll
-C:\Users\vichg\source\repos\Aplicacion-1\Aplicacion-1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
-C:\Users\vichg\source\repos\Aplicacion-1\Aplicacion-1\bin\Microsoft.ScriptManager.MSAjax.dll
-C:\Users\vichg\source\repos\Aplicacion-1\Aplicacion-1\bin\Microsoft.ScriptManager.WebForms.dll
-C:\Users\vichg\source\repos\Aplicacion-1\Aplicacion-1\bin\Microsoft.Web.Infrastructure.dll
-C:\Users\vichg\source\repos\Aplicacion-1\Aplicacion-1\bin\Newtonsoft.Json.dll
-C:\Users\vichg\source\repos\Aplicacion-1\Aplicacion-1\bin\System.Web.Optimization.dll
-C:\Users\vichg\source\repos\Aplicacion-1\Aplicacion-1\bin\WebGrease.dll
 C:\Users\vichg\source\repos\Aplicacion-1\Aplicacion-1\bin\System.Web.Optimization.xml
 C:\Users\vichg\source\repos\Aplicacion-1\Aplicacion-1\bin\Newtonsoft.Json.xml
 C:\Users\vichg\source\repos\Aplicacion-1\Aplicacion-1\bin\Antlr3.Runtime.pdb
@@ -71,6 +59,5 @@ C:\Users\vichg\source\repos\Aplicacion-1\Aplicacion-1\obj\Debug\Aplicacion-1.csp
 C:\Users\vichg\source\repos\Aplicacion-1\Aplicacion-1\obj\Debug\Aplicacion-1.csproj.CopyComplete
 C:\Users\vichg\source\repos\Aplicacion-1\Aplicacion-1\obj\Debug\Aplicacion-1.dll
 C:\Users\vichg\source\repos\Aplicacion-1\Aplicacion-1\obj\Debug\Aplicacion-1.pdb
-C:\Users\vichg\source\repos\Aplicacion-1\Aplicacion-1\bin\nunit.framework.dll
 C:\Users\vichg\source\repos\Aplicacion-1\Aplicacion-1\bin\nunit.framework.pdb
 C:\Users\vichg\source\repos\Aplicacion-1\Aplicacion-1\bin\nunit.framework.xml
