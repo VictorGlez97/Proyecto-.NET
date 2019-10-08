@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Text.RegularExpressions;
 
 namespace Aplicacion_1
 {
@@ -13,5 +14,11 @@ namespace Aplicacion_1
         {
 
         }
+
+        protected void correo(object sender, EventArgs e)
+        {
+            Response.Write("<script> window.alert('Escrito'); </script>");
+        }
     }
-}
+}   
+       

@@ -49,12 +49,12 @@ namespace Aplicacion_1 {
         protected global::System.Web.UI.WebControls.TextBox txt_semestre;
         
         /// <summary>
-        /// Control txtcorreo.
+        /// Control txt_correo.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtcorreo;
+        protected global::System.Web.UI.WebControls.TextBox txt_correo;
     }
 }
