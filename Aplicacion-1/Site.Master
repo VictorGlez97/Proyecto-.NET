@@ -52,7 +52,7 @@
                 <ul class="nav navbar-nav">
                   <li><a href="NET-Equipo7-Unidad0102.aspx"> Solicitud de Empleo </a></li>
                   <li><a href="NET-Equipo7-Unidad0102-maildelsolicitante.aspx">Solicitud de Información </a></li>
-                  <li><a href="#"> Page 3 </a></li>
+                  <li><a href="NET-Equipo7-Unidad0102-ControlEscolar.aspx"> Control Escolar </a></li>
                 </ul>
               </div>
             </nav>

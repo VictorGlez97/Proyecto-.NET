@@ -199,6 +199,7 @@
     <Content Include="bin\roslyn\vbc.exe.config" />
     <Content Include="bin\roslyn\vbc.rsp" />
     <Content Include="bin\roslyn\VBCSCompiler.exe.config" />
+    <Content Include="NET-Equipo7-Unidad0102-ControlEscolar.aspx" />
     <Content Include="obj\Debug\Aplicacion-1.csproj.CopyComplete" />
     <Content Include="obj\Debug\Aplicacion-1.csproj.CoreCompileInputs.cache" />
     <Content Include="obj\Debug\Aplicacion-1.csprojAssemblyReference.cache" />
@@ -276,6 +277,13 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Info.cs" />
+    <Compile Include="NET-Equipo7-Unidad0102-ControlEscolar.aspx.cs">
+      <DependentUpon>NET-Equipo7-Unidad0102-ControlEscolar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NET-Equipo7-Unidad0102-ControlEscolar.aspx.designer.cs">
+      <DependentUpon>NET-Equipo7-Unidad0102-ControlEscolar.aspx</DependentUpon>
+    </Compile>
     <Compile Include="NET-Equipo7-Unidad0102-maildelsolicitante.aspx.cs">
       <DependentUpon>NET-Equipo7-Unidad0102-maildelsolicitante.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

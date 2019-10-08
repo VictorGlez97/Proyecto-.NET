@@ -36,6 +36,7 @@ namespace Aplicacion_1
                 Response.Write("<script> window.alert('ERROR: Telefono no valido'); </script>");
                 Response.Redirect("/NET-Equipo7-Unidad0102.aspx");
             }
+            
 
             if (!Regex.IsMatch(txt_CURP.Text, @"[A-Z]{4}[0-9]{6}[H,M][A-Z]{5}[0-9]{2}") || txt_CURP.Text == "")
             {
