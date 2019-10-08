@@ -1,5 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="NET-Equipo7-Unidad0102-maildelsolicitante.aspx.cs" Inherits="Aplicacion_1.NET_Equipo7_Unidad0102_maildelsolicitante" %>
-<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+<asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div>
         <h2> Formulario de contacto </h2><hr /><br />
         <form class="form-group mt-3 p-2">

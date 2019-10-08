@@ -22,13 +22,13 @@ namespace Aplicacion_1 {
         protected global::System.Web.UI.WebControls.TextBox txt_nombre;
         
         /// <summary>
-        /// Control nacimiento.
+        /// Control txt_nacimiento.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox nacimiento;
+        protected global::System.Web.UI.WebControls.TextBox txt_nacimiento;
         
         /// <summary>
         /// Control txt_correo.
@@ -74,6 +74,15 @@ namespace Aplicacion_1 {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.FileUpload archivo;
+        
+        /// <summary>
+        /// Control doc.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.FileUpload doc;
         
         /// <summary>
         /// Control btn_enviar.

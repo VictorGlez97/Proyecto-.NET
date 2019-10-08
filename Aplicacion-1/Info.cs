@@ -1,10 +1,11 @@
 ﻿using System.Net;
 using System.Net.Mail;
 using System;
+using System.Collections.Generic;
 
 namespace Aplicacion_1
 {
-    public class Correo
+    public class Info
     {
 
         private MailMessage CorreoElectronico;
@@ -12,9 +13,8 @@ namespace Aplicacion_1
         private String MailFrom;
         private String Password;
         public Attachment Anexos;
-        public Attachment Docs;
 
-        public Correo()
+        public Info()
         {
             CorreoElectronico = new MailMessage("vichgleza@outlook.com", "vichgleza@gmail.com");
             EnvioCorreo = new SmtpClient("smtp.live.com", 587);
@@ -34,7 +34,6 @@ namespace Aplicacion_1
                 EnvioCorreo.DeliveryMethod = SmtpDeliveryMethod.Network;
                 CorreoElectronico.Body = Mensaje;
                 CorreoElectronico.Attachments.Add(Anexos);
-                CorreoElectronico.Attachments.Add(Docs);
 
                 EnvioCorreo.Send(CorreoElectronico);
 
