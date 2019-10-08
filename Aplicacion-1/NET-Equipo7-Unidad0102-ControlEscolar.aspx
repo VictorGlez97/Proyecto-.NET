@@ -17,7 +17,7 @@
             <asp:TextBox ID="txt_semestre" runat="server" class="form-control"></asp:TextBox><br /><br />
 
             <asp:Label runat="server" class="control-label" Text="Correo Electronico:"></asp:Label><br />
-            <asp:TextBox ID="txt_correo" runat="server" class="form-control" OnTextChanged="correo">  </asp:TextBox><br /><br />
+            <asp:TextBox ID="txt_correo" runat="server" class="form-control" OnTextChanged="correo" AutoPostBack="true">  </asp:TextBox><br /><br />
 
         </form>
     </div>

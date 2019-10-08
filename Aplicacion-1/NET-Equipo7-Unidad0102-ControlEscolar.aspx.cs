@@ -10,6 +10,7 @@ namespace Aplicacion_1
 {
     public partial class NET_Equipo7_Unidad0102_ControlEscolar : System.Web.UI.Page
     {
+
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -17,7 +18,11 @@ namespace Aplicacion_1
 
         protected void correo(object sender, EventArgs e)
         {
-            Response.Write("<script> window.alert('Escrito'); </script>");
+            if (!Regex.IsMatch(txt_correo.Text, @"\w+@\w+\.+[a-z]") || txt_correo.Text == "")
+            {
+                txt_correo.Text = "";
+                Response.Write("<script> window.alert('ERROR: correo no valido'); </script>");
+            }
         }
     }
 }   
