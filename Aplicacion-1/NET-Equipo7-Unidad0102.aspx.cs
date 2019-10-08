@@ -11,6 +11,7 @@ using System.Text.RegularExpressions;
 
 namespace Aplicacion_1
 {
+
     public partial class NET_Equipo7_Unidad0102 : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
@@ -20,7 +21,6 @@ namespace Aplicacion_1
 
         protected void btn_enviar_Click(object sender, EventArgs e)
         {
-            //Correo Mail = new Correo();
             Correo c = new Correo();
 
             if (!Regex.IsMatch(txt_correo.Text, @"") || txt_correo.Text == "")
@@ -83,8 +83,10 @@ namespace Aplicacion_1
 
         }
     }
+}
 
-    internal class Correo
+namespace Aplicacion_1.NET-Equipo7-Unidad0102.aspx{
+    class Correo
     {
     }
 }
