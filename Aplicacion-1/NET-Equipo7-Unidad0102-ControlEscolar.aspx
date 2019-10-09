@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="NET-Equipo7-Unidad0102-ControlEscolar.aspx.cs" Inherits="Aplicacion_1.NET_Equipo7_Unidad0102_ControlEscolar" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    <div>
+    <div class="container-fluid" id="contenedor">
         <h2> Control Escolar </h2><hr /><br />
         <form class="form-group mt-3 p-2">
             
