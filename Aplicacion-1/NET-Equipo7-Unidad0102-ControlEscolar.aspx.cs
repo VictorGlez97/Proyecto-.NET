@@ -14,7 +14,7 @@ namespace Aplicacion_1
         DataTable TblAlumnos = new DataTable();
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            CrearArchivo();
         }
 
         protected void correo(object sender, EventArgs e)
