@@ -27,13 +27,18 @@ namespace Aplicacion_1
             try
             {
                 CorreoElectronico.Body = Mensaje;
-                CorreoElectronico.Subject = "Nueva Solicitud de Empleo";
+                CorreoElectronico.Subject = "Pregunta sobre vacantes";
 
                 EnvioCorreo.Credentials = new NetworkCredential(MailFrom, Password);
                 EnvioCorreo.EnableSsl = true;
                 EnvioCorreo.DeliveryMethod = SmtpDeliveryMethod.Network;
                 CorreoElectronico.Body = Mensaje;
-                CorreoElectronico.Attachments.Add(Anexos);
+
+                if (Anexos != null)
+                {
+                    CorreoElectronico.Attachments.Add(Anexos);
+                }
+
 
                 EnvioCorreo.Send(CorreoElectronico);
 

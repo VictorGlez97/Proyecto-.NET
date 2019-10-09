@@ -47,69 +47,54 @@ namespace Aplicacion_1
             if (!Regex.IsMatch(txt_RFC.Text, @"[A-Z]{4}[0-9]{6}") || txt_RFC.Text == "")
             {
                 Response.Write("<script> window.alert('ERROR: RFC no valido'); </script>");
-                //Response.Redirect("/NET-Equipo7-Unidad0102.aspx");
+                Response.Redirect("/NET-Equipo7-Unidad0102.aspx");
             }
 
-            int tam = doc.PostedFile.ContentLength;
-
-            /*if (archivo.HasFile && doc.HasFile)
+            if (archivo.HasFile)
             {
-
-                Response.Write("<script> window.alert('Hay 2 archivos'); </script>");
-
-                /*int tm = archivo.PostedFile.ContentLength;
-                if ((tm + tam) < 25000)
+                foreach (HttpPostedFile file in archivo.PostedFiles)
                 {
-                    foreach (HttpPostedFile file in archivo.PostedFiles)
-                    {
-                        string fileName = Path.GetFileName(file.FileName);
+                    string fileName = Path.GetFileName(file.FileName);
 
-                        string strExtension = Path.GetExtension(fileName);
-                        if (strExtension == ".png" || strExtension == ".jpg" || strExtension == ".jpeg")
-                        {
-                            file.SaveAs(Server.MapPath("~/") + fileName);
-                            c.Anexos = new Attachment(file.InputStream, fileName);
-                            Response.Write("<script> window.alert(" + file.InputStream +"); </script> ");
-                        }
-                    }
-                }*/
-            /*}
-            else
-            {*/
-                if (archivo.HasFile)
-                {
-                    foreach (HttpPostedFile file in archivo.PostedFiles)
+                    string strExtension = Path.GetExtension(fileName);
+                    if (strExtension == ".png" || strExtension == ".jpg" || strExtension == ".jpeg")
                     {
-                        string fileName = Path.GetFileName(file.FileName);
-
-                        string strExtension = Path.GetExtension(fileName);
-                        if (strExtension == ".png" || strExtension == ".jpg" || strExtension == ".jpeg")
-                        {
-                            file.SaveAs(Server.MapPath("~/") + fileName);
-                            c.Anexos = new Attachment(file.InputStream, fileName);
-                        }
+                        file.SaveAs(Server.MapPath("~/") + fileName);
+                        c.Anexos = new Attachment(file.InputStream, fileName);
                     }
                 }
+            } else
+            {
+                Response.Write("<script> window.alert('ERROR: Es importante mandar una foto de usted'); </script>");
+                Response.Redirect("/NET-Equipo7-Unidad0102.aspx");
+            }
 
+            if (doc.HasFile)
+            {
+                int tam = doc.PostedFile.ContentLength;
                 if (tam < 5000)
                 {
-                    if (doc.HasFile)
+                    foreach (HttpPostedFile fi in doc.PostedFiles)
                     {
-                        foreach (HttpPostedFile fi in doc.PostedFiles)
-                        {
-                            string fN = Path.GetFileName(fi.FileName);
+                        string fN = Path.GetFileName(fi.FileName);
 
-                            string strExt = Path.GetExtension(fN);
-                            if (strExt == ".docx" || strExt == ".pdf" || strExt == ".txt")
-                            {
-                                fi.SaveAs(Server.MapPath("~/") + fN);
-                                c.Docs = new Attachment(fi.InputStream, fN);
-                            }
+                        string strExt = Path.GetExtension(fN);
+                        if (strExt == ".jpeg" || strExt == ".pdf")
+                        {
+                            fi.SaveAs(Server.MapPath("~/") + fN);
+                            c.Docs = new Attachment(fi.InputStream, fN);
                         }
                     }
+                } else
+                {
+                    Response.Write("<script> window.alert('ERROR: El Curriculum o documento es demasiado pesado :('); </script>");
+                    Response.Redirect("/NET-Equipo7-Unidad0102.aspx");
                 }
-            //}
-
+            } else
+            {
+                Response.Write("<script> window.alert('ERROR: Es importante mandar un Curriculum'); </script>");
+                Response.Redirect("/NET-Equipo7-Unidad0102.aspx");
+            }
 
             StringBuilder BodyMesage = new StringBuilder();
 

@@ -1,2 +1,50 @@
 ﻿body {
+
+}
+
+img{
+    width: 8%;
+    margin-left: 7%;
+    margin-top: 1%;
+}
+
+#Label1{
+    margin-left: 5%;
+    font-size: 20px;
+}
+
+#Label2{
+    margin-left: 25%;
+    font-size: 17px;
+}
+
+#Label3{
+    margin-left: 10%;
+    font-size: 17px;
+}
+
+nav{
+    width: 90%;
+    margin-top: 1%;
+    margin-left: 5%;
+}
+
+#contenedor{
+    width: 80%;
+    margin-top: -1%;
+}
+
+#contenedor span{
+    margin-left: 15%;
+    margin-bottom: 5%;
+    font-size: 17px;
+}
+
+#contenedor input{
+    margin-left: 15%;
+    width: 70%;
+}
+
+#MainContent{
+    margin-left: 20%;
 }

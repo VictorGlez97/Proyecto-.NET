@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="NET-Equipo7-Unidad0102.aspx.cs" Inherits="Aplicacion_1.NET_Equipo7_Unidad0102" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    <div>
+    <div class="container-fluid" id="contenedor">
         <h2> Formulario de Solicitante </h2><hr /><br />
         <form class="form-group mt-3 p-2">
             
@@ -24,10 +24,10 @@
             <asp:TextBox ID="txt_RFC" runat="server" class="form-control"></asp:TextBox><br /><br />
 
             <asp:Label runat="server" class="control-label" Text="Fotografia:"></asp:Label><br />
-            <asp:FileUpload ID="archivo" runat="server" /><br />
+            <asp:FileUpload ID="archivo" runat="server" class="btn-info"/><br />
 
             <asp:Label runat="server" class="control-label" Text="Curriculum o otro doc:"></asp:Label><br />
-            <asp:FileUpload ID="doc" runat="server" /><br />
+            <asp:FileUpload ID="doc" runat="server" class="btn btn-info"/><br />
 
             <asp:Button ID="btn_enviar" runat="server" CssClass="btn btn-success btn-block" Text="Enviar" OnClick="btn_enviar_Click" />
         </form>

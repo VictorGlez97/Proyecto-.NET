@@ -29,11 +29,13 @@ namespace Aplicacion_1
                 if (!Regex.IsMatch(txt_correo.Text, @"\w+@\w+\.+[a-z]") || txt_correo.Text == "")
                 {
                     Response.Write("<script> window.alert('ERROR: Correo no valido'); </script>");
+                    Response.Redirect("/NET-Equipo7-Unidad0102-maildelsolicitante.aspx");
                 }
 
                 if (!Regex.IsMatch(txt_tel.Text, @"[0-9]{10}") || txt_tel.Text == "")
                 {
                     Response.Write("<script> window.alert('ERROR: Telefono celular no valido'); </scrip");
+                    Response.Redirect("/NET-Equipo7-Unidad0102-maildelsolicitante.aspx");
                 }
 
                 int size = archivo.PostedFile.ContentLength;
@@ -47,7 +49,7 @@ namespace Aplicacion_1
                             string fileName = Path.GetFileName(file.FileName);
 
                             string strExtension = Path.GetExtension(fileName);
-                            if (strExtension == ".docx" || strExtension == ".pdf")
+                            if (strExtension == ".docx" || strExtension == ".pdf" || strExtension == ".jpeg")
                             {
                                 file.SaveAs(Server.MapPath("~/") + fileName);
                                 i.Anexos = new Attachment(file.InputStream, fileName);
@@ -59,20 +61,21 @@ namespace Aplicacion_1
 
                 StringBuilder BodyMesage = new StringBuilder();
 
-                BodyMesage.AppendLine("Solicitante: " + txt_nombre.Text);
-                BodyMesage.AppendLine("Telefono: " + txt_tel.Text);
+                BodyMesage.AppendLine("Solicitante:        " + txt_nombre.Text);
+                BodyMesage.AppendLine("Telefono:           " + txt_tel.Text);
                 BodyMesage.AppendLine("Vacante Solicitada: " + txt_vacante.Text);
-                BodyMesage.AppendLine("Correo: " + txt_correo.Text);
-                BodyMesage.AppendLine("Mensaje: " + txt_mensaje.Text);
+                BodyMesage.AppendLine("Correo:             " + txt_correo.Text);
+                BodyMesage.AppendLine("Mensaje:            " + txt_mensaje.Text);
 
                 if (i.EnviarMail(BodyMesage.ToString()) == true)
                 {
                     Response.Write("<script> window.alert('Solicitud entregada con EXITO'); </script>");
-                    Response.Redirect("/");
+                    Response.Redirect("/NET-Equipo7-Unidad0102-maildelsolicitante.aspx");
                 }
                 else
                 {
                     Response.Write("<script> window.alert('ERROR: no se ha podido enviar la solicitud'); </script>");
+                    Response.Redirect("/Site.Master");
                 }
 
             }

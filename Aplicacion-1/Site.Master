@@ -6,37 +6,10 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/StyleSheet1.css" />
     <script src="Scripts/jquery-3.0.0.min.js"></script>
 
     <title> Aplicacion 1 </title>
-
-    <style type="text/css">
-        img {
-            margin-top: 2%;
-            width: 100px;
-        }
-
-        #Label1{
-            margin-left: 5%;
-            font-size: 200%;
-        }
-
-        #Label2{
-            margin-left: 20%;
-            font-size: 130%;
-        }
-
-        #Label3{
-            margin-left: 5%;
-            font-size: 130%;
-        }
-
-        nav{
-            margin-top: 2%;
-            margin-bottom: 2%;
-        }
-
-    </style>
 
 </head>
 <body>
@@ -45,7 +18,7 @@
             <img alt="" class="img-fluid" src="img/ITL.png" />
             <asp:Label ID="Label1" runat="server" CssClass="h-75" Text="Instituto Tecnologico de la Laguna"></asp:Label><br />
             <asp:Label ID="Label2" runat="server" CssClass="h-75" Text="Desarrollo Web en .Net"></asp:Label>
-            <asp:Label ID="Label3" runat="server" CssClass="h-75" Text="Equipo #"></asp:Label>
+            <asp:Label ID="Label3" runat="server" CssClass="h-75" Text="Equipo #7"></asp:Label>
             
             <nav class="navbar navbar-inverse">
               <div class="container-fluid">
