@@ -19,7 +19,7 @@ namespace Aplicacion_1
             CorreoElectronico = new MailMessage("vichgleza@outlook.com", "vichgleza@gmail.com");
             EnvioCorreo = new SmtpClient("smtp.live.com", 587);
             MailFrom = "vichgleza@outlook.com";
-            Password = "58_Gonzalez";
+            Password = "*******";
         }
 
         public bool EnviarMail(string Mensaje)
