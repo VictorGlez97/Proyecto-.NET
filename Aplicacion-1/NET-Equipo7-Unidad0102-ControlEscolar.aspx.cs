@@ -15,6 +15,8 @@ using iText.Kernel.Pdf;
 using PdfWriter = iTextSharp.text.pdf.PdfWriter;
 using PageSize = iTextSharp.text.PageSize;
 using Document = iTextSharp.text.Document;
+using System.Net.Mail;
+using System.Text;
 
 namespace Aplicacion_1
 {
@@ -91,20 +93,8 @@ namespace Aplicacion_1
             GrdAlumnos.DataBind();
             Session["TblAlumnos"] = TblAlumnos;
         }
-        private void recorer()
-        {
-            int iPosicion = 0;
-            foreach (GridViewRow row in GrdAlumnos.Rows)
-            {
-                iPosicion++;
-                Response.Write("<script>window.alert(' Alumno: " + iPosicion.ToString() + ".- " + row.Cells[1].Text + "');</script>");
-            }
-        }
-        private void crearPDF()
-        {
-           
-        }
-        private void AñadirDatos()
+      
+        private Boolean AñadirDatos()
         {
             Document doc = new Document(PageSize.LETTER);
             PdfWriter writer = null;
@@ -204,11 +194,77 @@ namespace Aplicacion_1
 
             doc.Close();
             writer.Close();
+            return true;
         }
 
         protected void BtnSave2_Click(object sender, EventArgs e)
         {
-            AñadirDatos();
+           if( true == AñadirDatos())
+            {
+                Response.Write("<script>window.alert(' PDF generado Correctamente ');</script>");
+            }
+        }
+        private void Enviar_Correo()
+        {
+            try
+            {
+                string fileName = "";
+                Info i = new Info();
+
+                int size = archivo.PostedFile.ContentLength;
+
+                if (size < 5000)
+                {
+                    if (archivo.HasFile)
+                    {
+                        foreach (HttpPostedFile file in archivo.PostedFiles)
+                        {
+                            fileName = Path.GetFileName(file.FileName);
+
+                            string strExtension = Path.GetExtension(fileName);
+                            if (strExtension == ".docx" || strExtension == ".pdf" || strExtension == ".jpeg")
+                            {
+                                file.SaveAs(Server.MapPath("~/") + fileName);
+                                i.Anexos = new Attachment(file.InputStream, fileName);
+                            }
+                        }
+                    }
+                }
+
+
+                StringBuilder BodyMesage = new StringBuilder();
+
+
+                if (i.EnviarMail(fileName.ToString(),"Envio de PDF") == true)
+                {
+                    Response.Write("<script> window.alert('Solicitud entregada con EXITO'); </script>");
+                    Response.Redirect("/NET-Equipo7-Unidad0102-maildelsolicitante.aspx");
+                }
+                else
+                {
+                    Response.Write("<script> window.alert('ERROR: no se ha podido enviar la solicitud'); </script>");
+                    Response.Redirect("/Site.Master");
+                }
+
+            }
+            catch (Exception f)
+            {
+                Response.Write("<script> window.alert(" + f + "); </script>");
+                throw;
+            }
+        }
+
+        protected void EnviarC_Click(object sender, EventArgs e)
+        {
+               if (0 != archivo.PostedFile.ContentLength){
+                Enviar_Correo();
+                    
+            }
+            else
+            {
+                Response.Write("<script> window.alert('Necesita Agregar el pdf a Enviar'); </script>");
+            }
+
         }
 
         protected void EnviarC_Click(object sender, EventArgs e)

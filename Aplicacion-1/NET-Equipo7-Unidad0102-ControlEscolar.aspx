@@ -32,11 +32,14 @@
 
             <asp:Label runat="server" class="control-label" Text="Correo Electronico:"></asp:Label><br />
             <asp:TextBox ID="txt_correo" runat="server" class="form-control" OnTextChanged="correo" AutoPostBack="true"> </asp:TextBox><br /><br />
-             <div class="row">
+
+
+             <div class="row">  <asp:Label runat="server" class="control-label" Text="Agregar un adjunto:"></asp:Label><br />
+            <asp:FileUpload ID="archivo" runat="server" class="btn btn-info"/><br />
             <div class="col-4 col-sm-4">
-                <asp:Button ID="BtnSave" runat="server" OnClick="BtnSave_Click" Text="Guardar Alumno" CssClass="btn btn-success btn-block" /><br />
-                <asp:Button ID="Button1" runat="server" OnClick="BtnSave2_Click" Text="PDF Alumno" CssClass="btn btn-success btn-block" /><br />
-                <asp:Button ID="Button2" runat="server" OnClick="EnviarC_Click" Text="PDF Alumno" CssClass="btn btn-success btn-block" /><br />
+                <asp:Button ID="BtnSave" runat="server" OnClick="BtnSave_Click" Text="Guardar Alumno" CssClass="btn btn-success btn-block form-contro" /><br />
+                <asp:Button ID="Button1" runat="server" OnClick="BtnSave2_Click" Text="Generar PDF Alumno" CssClass="btn btn-success btn-block form-contro" /><br />
+                  <asp:Button ID="Button2" runat="server" OnClick="EnviarC_Click" Text="Enviar Correo" CssClass="btn btn-success btn-block form-contro" /><br />
             </div>
                 </div>
              <div class="row">

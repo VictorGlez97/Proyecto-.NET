@@ -67,7 +67,7 @@ namespace Aplicacion_1
                 BodyMesage.AppendLine("Correo:             " + txt_correo.Text);
                 BodyMesage.AppendLine("Mensaje:            " + txt_mensaje.Text);
 
-                if (i.EnviarMail(BodyMesage.ToString()) == true)
+                if (i.EnviarMail(BodyMesage.ToString(), "Pregunta sobre vacantes") == true)
                 {
                     Response.Write("<script> window.alert('Solicitud entregada con EXITO'); </script>");
                     Response.Redirect("/NET-Equipo7-Unidad0102-maildelsolicitante.aspx");
