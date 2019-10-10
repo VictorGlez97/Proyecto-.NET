@@ -9,12 +9,19 @@ using System.Text.RegularExpressions;
 using iTextSharp.text;
 using iTextSharp.text.pdf;
 using System.IO;
+using iText.Kernel.Geom;
+using iText.StyledXmlParser.Jsoup.Nodes;
+using iText.Kernel.Pdf;
+using PdfWriter = iTextSharp.text.pdf.PdfWriter;
+using PageSize = iTextSharp.text.PageSize;
+using Document = iTextSharp.text.Document;
 
 namespace Aplicacion_1
 {
     public partial class NET_Equipo7_Unidad0102_ControlEscolar : System.Web.UI.Page
     {
         DataTable TblAlumnos = new DataTable();
+
         protected void Page_Load(object sender, EventArgs e)
         {
             CrearArchivo();
@@ -103,16 +110,16 @@ namespace Aplicacion_1
             PdfWriter writer = null;
             // Indicamos donde vamos a guardar el documento
             int numero = 0;
-            for(int i = 0;i <= numero; i++)
+            for (int i = 0;i <= numero; i++)
             {
-                if (System.IO.File.Exists("C:/Users/Luis/Desktop/ControlAlumnos" + numero + ".pdf"))
+                if (System.IO.File.Exists("C:/Users/vichg/OneDrive/Escritorio/ControlAlumnos" + numero + ".pdf"))
                 {
                     numero++;
                 }
                 else
                 {
                      writer = PdfWriter.GetInstance(doc,
-                     new FileStream(@"C:\Users\Luis\Desktop\ControlAlumnos" + numero +".pdf", FileMode.Create));
+                     new FileStream(@"C:\Users\vichg\OneDrive\Escritorio\ControlAlumnos" + numero +".pdf", FileMode.Create));
                 }
             }
          
@@ -202,6 +209,11 @@ namespace Aplicacion_1
         protected void BtnSave2_Click(object sender, EventArgs e)
         {
             AñadirDatos();
+        }
+
+        protected void EnviarC_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }   
