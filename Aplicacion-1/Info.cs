@@ -16,18 +16,19 @@ namespace Aplicacion_1
 
         public Info()
         {
+            //vichgleza@gmail.com
             CorreoElectronico = new MailMessage("vichgleza@outlook.com", "vichgleza@gmail.com");
             EnvioCorreo = new SmtpClient("smtp.live.com", 587);
             MailFrom = "vichgleza@outlook.com";
             Password = "*******";
         }
 
-        public bool EnviarMail(string Mensaje)
+        public bool EnviarMail(string Mensaje, string asunto)
         {
             try
             {
                 CorreoElectronico.Body = Mensaje;
-                CorreoElectronico.Subject = "Pregunta sobre vacantes";
+                CorreoElectronico.Subject =asunto;
 
                 EnvioCorreo.Credentials = new NetworkCredential(MailFrom, Password);
                 EnvioCorreo.EnableSsl = true;
