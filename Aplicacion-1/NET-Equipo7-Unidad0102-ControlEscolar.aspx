@@ -1,5 +1,8 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="NET-Equipo7-Unidad0102-ControlEscolar.aspx.cs" Inherits="Aplicacion_1.NET_Equipo7_Unidad0102_ControlEscolar" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+    <script>
+        
+    </script>
     <div class="container-fluid" id="contenedor">
         <h2> Control Escolar </h2><hr /><br />
         <form class="form-group mt-3 p-2">
@@ -12,8 +15,8 @@
 
             <asp:Label runat="server" class="control-label" Text="Carrera :"></asp:Label><br />
            
-            <div class="col-4">
-                <asp:DropDownList ID="CmbCarreras" runat="server" CssClass="custom-select-lg">
+            <div>
+                <asp:DropDownList ID="CmbCarreras" runat="server" CssClass="custom-select-lg form-control">
                     <asp:ListItem></asp:ListItem>
                     <asp:ListItem>ELECTRONICA</asp:ListItem>
                     <asp:ListItem>ELECTRICA</asp:ListItem>
@@ -31,7 +34,9 @@
             <asp:TextBox ID="txt_correo" runat="server" class="form-control" OnTextChanged="correo" AutoPostBack="true"> </asp:TextBox><br /><br />
              <div class="row">
             <div class="col-4 col-sm-4">
-                <asp:Button ID="BtnSave" runat="server" OnClick="BtnSave_Click" Text="Guardar Alumno" CssClass="btn-primary" />
+                <asp:Button ID="BtnSave" runat="server" OnClick="BtnSave_Click" Text="Guardar Alumno" CssClass="btn btn-success btn-block form-contro" />
+                <asp:Button ID="Button1" runat="server" OnClick="BtnSave2_Click" Text="PDF Alumno" CssClass="btn btn-success btn-block form-contro" />
+                  <asp:Button ID="Button2" runat="server" OnClick="EnviarC_Click" Text="Enviar Correo" CssClass="btn btn-success btn-block form-contro" />
             </div>
                 </div>
              <div class="row">
@@ -44,6 +49,7 @@
                     <asp:BoundField DataField="NOMBRE" HeaderText="NOMBRE" />
                     <asp:BoundField DataField="CARRERA" HeaderText="CARRERA" />
                     <asp:BoundField DataField="SEMESTRE" HeaderText="SEMESTRE" />
+                    <asp:BoundField DataField="CORREO" HeaderText="CORREO" />
                 </Columns>
                 <FooterStyle BackColor="#CCCC99" />
                 <HeaderStyle BackColor="#6B696B" Font-Bold="True" ForeColor="White" />
